@@ -3,7 +3,6 @@ package ru.geekbrains.geekbrains_popular_libraries_kotlin.ui.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import ru.geekbrains.geekbrains_popular_libraries_kotlin.R
 import ru.geekbrains.geekbrains_popular_libraries_kotlin.databinding.ActivityMainBinding
 import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.presenter.MainPresenter
 import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.view.MainView
@@ -19,22 +18,28 @@ class MainActivity : AppCompatActivity(), MainView {
         vb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(vb?.root)
 
-        val listener = View.OnClickListener { button ->
-            when(button.id){
-                R.id.btn_counter1 -> {
-                    vb?.btnCounter1?.text = presenter.counterClick(0).toString()
-                }
-                R.id.btn_counter2 -> {
-                    vb?.btnCounter2?.text = presenter.counterClick(1).toString()
-                }
-                R.id.btn_counter3 -> {
-                    vb?.btnCounter3?.text = presenter.counterClick(2).toString()
-                }
-            }
+        val listenerFirstButton = View.OnClickListener {
+            presenter.firstButtonClicked()
+        }
+        val listenerSecondButton = View.OnClickListener {
+            presenter.secondButtonClicked()
+        }
+        val listenerThirdButton = View.OnClickListener {
+            presenter.thirdButtonClicked()
         }
 
-        vb?.btnCounter1?.setOnClickListener(listener)
-        vb?.btnCounter2?.setOnClickListener(listener)
-        vb?.btnCounter3?.setOnClickListener(listener)
+        vb?.btnCounter1?.setOnClickListener(listenerFirstButton)
+        vb?.btnCounter2?.setOnClickListener(listenerSecondButton)
+        vb?.btnCounter3?.setOnClickListener(listenerThirdButton)
+    }
+
+    override fun setFirstButtonText(text: String) {
+        vb?.btnCounter1?.text = text
+    }
+    override fun setSecondButtonText(text: String) {
+        vb?.btnCounter2?.text = text
+    }
+    override fun setThirdButtonText(text: String) {
+        vb?.btnCounter3?.text = text
     }
 }
