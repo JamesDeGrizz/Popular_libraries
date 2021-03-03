@@ -5,14 +5,15 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion '30.0.2'
+    buildToolsVersion "30.0.2"
 
     buildFeatures {
+        viewBinding true
         dataBinding true
     }
 
     defaultConfig {
-        applicationId "com.degrizz.james.android_gkb.hw1"
+        applicationId "ru.geekbrains.geekbrains_popular_libraries_kotlin"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

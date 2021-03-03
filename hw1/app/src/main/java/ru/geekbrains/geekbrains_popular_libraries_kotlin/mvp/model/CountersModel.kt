@@ -1,4 +1,4 @@
-package com.degrizz.james.android_gkb.hw1.mvp.model
+package ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.model
 
 class CountersModel {
 

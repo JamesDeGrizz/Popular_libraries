@@ -1,4 +1,4 @@
-package com.degrizz.james.android_gkb.hw1
+package ru.geekbrains.geekbrains_popular_libraries_kotlin
 
 import org.junit.Test
 

@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "hw1"
+rootProject.name = "geekbrains_popular_libraries_kotlin"

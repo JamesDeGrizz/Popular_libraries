@@ -1,4 +1,4 @@
-package com.degrizz.james.android_gkb.hw1
+package ru.geekbrains.geekbrains_popular_libraries_kotlin
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.degrizz.james.android_gkb.hw1", appContext.packageName)
+        assertEquals("ru.geekbrains.geekbrains_popular_libraries_kotlin", appContext.packageName)
     }
 }
